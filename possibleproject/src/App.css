@@ -27,7 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+* {
+  cursor: default;
+}
 
+input,
+textarea {
+  cursor: text;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,6 +42,60 @@
   to {
     transform: rotate(360deg);
   }
+}
+body,
+html {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.register {
+  position: relative;
+  min-height: 100vh;
+  background: url("images/initial_background_register.jpeg") no-repeat center
+    center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  user-select: none;
+}
+
+.register::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card_register {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.card_register > h1 {
+  color: white;
+
+  font-weight: 800;
+  margin: 0;
 }
 
 .textfield_register_username {
