@@ -9,7 +9,7 @@ const Register = () => {
     <div className="register">
       <div className="card_register">
         <div className="register_title">
-          <h1 classname="register_name_title">Poker Up!</h1>
+          <h1 className="register_name_title">Poker Up!</h1>
         </div>
         <div className="user_interaction_register">
           <div className="textfield_register_username">

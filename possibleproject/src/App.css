@@ -1,57 +1,26 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Poker";
+  src: url("fonts/Poker.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   cursor: default;
 }
 
-input,
-textarea {
-  cursor: text;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 body,
 html {
   background-color: black;
   color: white;
-  margin: 0;
-  padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
 }
 
+/* Register */
 .register {
   position: relative;
   min-height: 100vh;
@@ -60,9 +29,10 @@ html {
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: default;
   user-select: none;
+  overflow: hidden;
 }
 
 .register::before {
@@ -72,85 +42,72 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
+  pointer-events: none;
+  clip-path: polygon(0 0, 26% 0, 100% 100%, 0 100%);
 }
 
 .card_register {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 60%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px 35px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0px 10px 40px #00000056;
-  margin-bottom: 50px;
-  margin-top: 30px;
-}
-.card_register > h1 {
-  color: white;
-
-  font-weight: 800;
-  margin: 0;
-}
-
-.textfield_register_username {
-  width: 100%;
+  max-width: 31.25rem;
+  padding: 3.125rem;
+  background: transparent;
+  margin: 1.875rem 3.125rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-  justify-content: center;
-  margin: 10px 0px;
-}
-.textfield_register_username > input {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
-  background: #201b2c;
-  color: azure;
-  font-size: 12pt;
-  box-shadow: 0px 10px 40px #00000056;
-  outline: none;
   box-sizing: border-box;
 }
 
-.textfield_register_username > label {
-  color: azure;
-  margin-bottom: 10px;
+.register_title {
+  font-family: "Poker", sans-serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: darkred !important;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.25rem;
 }
-.textfield_register_username > input::placeholder {
+
+.register_title {
   color: white;
 }
 
+.textfield_register_username,
 .textfield_register_password {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 10px 0px;
+  margin: 0.9375rem 0;
 }
+
+.textfield_register_username > input,
 .textfield_register_password > input {
   width: 100%;
   border: none;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
   background: #201b2c;
   color: azure;
-  font-size: 12pt;
-  box-shadow: 0px 10px 40px #00000056;
+  font-size: 0.75rem;
+  box-shadow: 0px 0.625rem 2.5rem #00000056;
   outline: none;
   box-sizing: border-box;
 }
+
+.textfield_register_username > label,
 .textfield_register_password > label {
   color: azure;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
+
+.textfield_register_username > input::placeholder,
 .textfield_register_password > input::placeholder {
   color: white;
 }
