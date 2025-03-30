@@ -76,6 +76,9 @@ html {
 .register_title {
   color: white;
 }
+.user_interaction_register {
+  width: 150%;
+}
 
 .textfield_register_username,
 .textfield_register_password {
