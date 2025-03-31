@@ -5,8 +5,8 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const redirectToLogin = () => {
-    window.location.href = "/login";
+  const redirectToRegister = () => {
+    window.location.href = "/register";
   };
 
   return (
@@ -38,9 +38,9 @@ const Login = () => {
             />
           </div>
           <div className="reference_signin">
-            <p>If you already have an account,</p>
-            <a onClick={redirectToLogin} style={{ cursor: "pointer" }}>
-              login.
+            <p>If you don't have an account,</p>
+            <a onClick={redirectToRegister} style={{ cursor: "pointer" }}>
+              register.
             </a>
           </div>
         </div>
