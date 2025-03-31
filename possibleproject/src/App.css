@@ -20,8 +20,8 @@ html {
   font-family: Arial, sans-serif;
 }
 
-/* Register */
-.register {
+/* Login */
+.login {
   position: relative;
   min-height: 100vh;
   background: url("images/initial_background_register.jpeg") no-repeat center
@@ -35,7 +35,7 @@ html {
   overflow: hidden;
 }
 
-.register::before {
+.login::before {
   content: "";
   position: absolute;
   top: 0;
@@ -48,7 +48,7 @@ html {
   clip-path: polygon(0 0, 26% 0, 100% 100%, 0 100%);
 }
 
-.card_register {
+.card_login {
   position: relative;
   z-index: 3;
   width: 60%;
@@ -63,7 +63,7 @@ html {
   box-sizing: border-box;
 }
 
-.register_title {
+.login_title {
   font-family: "Poker", sans-serif;
   font-style: italic;
   font-size: 3rem;
@@ -73,15 +73,15 @@ html {
   margin-bottom: 1.25rem;
 }
 
-.register_title {
+.login_title {
   color: white;
 }
-.user_interaction_register {
+.user_interaction_login {
   width: 150%;
 }
 
-.textfield_register_username,
-.textfield_register_password {
+.textfield_login_username,
+.textfield_login_password {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,8 +90,8 @@ html {
   margin: 0.9375rem 0;
 }
 
-.textfield_register_username > input,
-.textfield_register_password > input {
+.textfield_login_username > input,
+.textfield_login_password > input {
   width: 100%;
   border: none;
   border-radius: 0.625rem;
@@ -104,13 +104,13 @@ html {
   box-sizing: border-box;
 }
 
-.textfield_register_username > label,
-.textfield_register_password > label {
+.textfield_login_username > label,
+.textfield_login_password > label {
   color: azure;
   margin-bottom: 0.625rem;
 }
 
-.textfield_register_username > input::placeholder,
-.textfield_register_password > input::placeholder {
+.textfield_login_username > input::placeholder,
+.textfield_login_password > input::placeholder {
   color: white;
 }
