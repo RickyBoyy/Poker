@@ -5,9 +5,9 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <div className="Login">
-      <div className="login_credentials">
-        <div className="textfield_login_username">
+    <div className="register">
+      <div className="register_credentials">
+        <div className="textfield_register_username">
           <label htmlFor="Username">Username</label>
           <input
             type="text"
@@ -18,7 +18,7 @@ const Register = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div className="textfield_login_password">
+        <div className="textfield_register_password">
           <label htmlFor="Password">Password</label>
           <input
             type="password"
