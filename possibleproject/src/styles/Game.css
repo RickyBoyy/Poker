@@ -1,0 +1,291 @@
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 100vh;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.game-header button {
+  padding: 8px 16px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-header button:hover {
+  background-color: #3a3a3a;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.bot-area, .player-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-info {
+  text-align: center;
+}
+
+.player-info h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.player-info p {
+  margin: 5px 0;
+  color: #aaa;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  width: 60px;
+  height: 90px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: white;
+  margin: 0 5px;
+  position: relative;
+}
+
+.card.face-up {
+  background-color: white;
+}
+
+.card.face-down {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Make diamonds and hearts red */
+.card.face-up[data-suit="♦"],
+.card.face-up[data-suit="♥"] {
+  color: red;
+}
+
+/* Make clubs and spades black */
+.card.face-up[data-suit="♣"],
+.card.face-up[data-suit="♠"] {
+  color: black;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.community-cards {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pot-display {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.action-buttons button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-buttons button:nth-child(1) { /* Fold */
+  background-color: #ff4444;
+  color: white;
+}
+
+.action-buttons button:nth-child(2) { /* Call */
+  background-color: #44ff44;
+  color: black;
+}
+
+.action-buttons button:nth-child(3) { /* Raise */
+  background-color: #4444ff;
+  color: white;
+}
+
+.action-buttons button:nth-child(4) { /* Check */
+  background-color: #44ffff;
+  color: black;
+}
+
+.action-buttons button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-message {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+  min-height: 27px;
+}
+
+.game-over {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-over button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-over button:hover {
+  background-color: #3a3a3a;
+}
+
+.raise-slider {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.raise-slider input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  background: #444;
+  border-radius: 4px;
+  outline: none;
+  margin: 10px 0;
+}
+
+.raise-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ffd700;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.raise-slider input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.raise-amount {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffd700;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.toggle-display {
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.toggle-display:hover {
+  background-color: #2a2a2a;
+  border-color: #666;
+}
+
+.game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.game-over-screen h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.game-over-screen p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.game-over-screen button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-over-screen button:hover {
+  background-color: #34495e;
+} 

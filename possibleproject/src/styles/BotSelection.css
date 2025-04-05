@@ -1,0 +1,166 @@
+.bot-selection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 100vh;
+}
+
+.bot-selection-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.bot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.bot-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.bot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bot-card.selected {
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.bot-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bot-card:hover .bot-image {
+  transform: scale(1.05);
+}
+
+.difficulty-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.EASY {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.difficulty-badge.MEDIUM {
+  background-color: #FFC107;
+  color: black;
+}
+
+.difficulty-badge.HARD {
+  background-color: #F44336;
+  color: white;
+}
+
+.bot-info {
+  padding: 20px;
+}
+
+.bot-info h2 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.bot-description {
+  color: #aaa;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.bot-characteristics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.characteristic {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #fff;
+  font-weight: 500;
+}
+
+.traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.trait {
+  background-color: #333;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.catchphrase {
+  font-style: italic;
+  color: #ffd700;
+}
+
+.start-game-button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-game-button:hover:not(:disabled) {
+  background-color: #ffc107;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.start-game-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+} 
